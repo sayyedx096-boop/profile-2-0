@@ -321,7 +321,21 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
   .tl-num{width:44px;height:44px;font-size:1.05rem}
   .tl-item::before{left:21px}
 }
-/* lightbox */
+/* sticky discount badge */
+.discount-badge{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:40;background:var(--gold);color:#0A0A0A;
+  padding:14px 10px 14px 16px;border-radius:12px 0 0 12px;font-family:'Bricolage Grotesque';font-weight:700;
+  text-decoration:none;box-shadow:-4px 4px 20px rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;
+  gap:2px;line-height:1.15;transition:transform .2s,padding .2s}
+.discount-badge:hover{transform:translateY(-50%) translateX(-4px)}
+.discount-badge .pct{font-size:1.1rem;font-weight:800}
+.discount-badge .lbl{font-size:.62rem;letter-spacing:.04em;text-transform:uppercase;opacity:.85;max-width:52px;text-align:center}
+@media(max-width:760px){
+  .discount-badge{padding:10px 8px 10px 12px;border-radius:10px 0 0 10px}
+  .discount-badge .pct{font-size:.95rem}
+  .discount-badge .lbl{font-size:.56rem;max-width:44px}
+}
+
+
 .lightbox{position:fixed;inset:0;z-index:100;background:rgba(5,5,5,.94);display:none;align-items:center;justify-content:center;padding:40px}
 .lightbox.open{display:flex}
 .lb-img{max-width:92%;max-height:88vh;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
@@ -396,7 +410,7 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
       <a href="#contact">Contact</a>
     </div>
     <button class="navburger" id="navBurger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <a href="https://syedattaullahshah.gumroad.com/l/profile-20" class="navcta">Get Profile 2.0</a>
+    <a href="https://syedattaullahshah.gumroad.com/l/profile-20?wanted=true" class="navcta">Get Profile 2.0</a>
   </div>
 </nav>
 
@@ -418,9 +432,9 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
   <div class="wrap">
     <div class="eyebrow"><span></span>Profile 2.0</div>
     <h1>Convert your LinkedIn profile views into <em>paying clients</em></h1>
-    <p class="sub">Your content brings people to your profile. They see the banner, headline and About, find no reason to stay and go back to the feed. Profile 2.0 fixes that.</p>
+    <p class="sub">Your content brings people to your profile. They see the banner, headline and About, find no reason to stay and leave. Profile 2.0 fixes that.</p>
     <div class="actions">
-      <a href="https://syedattaullahshah.gumroad.com/l/profile-20" class="btn btn-gold">Convert my viewers into clients</a>
+      <a href="https://syedattaullahshah.gumroad.com/l/profile-20?wanted=true" class="btn btn-gold">Convert my viewers into clients</a>
       <a href="https://calendly.com/syedattaullahx96/free-discovery-call" class="btn btn-ghost">Book a 15-min call</a>
     </div>
     <div class="note"><b>20% off</b> the launch price till 20 August</div>
@@ -443,9 +457,10 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
     <p class="lead">They see your name somewhere on the feed, click your name to visit your profile and... What happens next depends entirely on the top two sections of your profile, your banner and headline.</p>
     <div class="flow">
       <div class="step"><div class="n">01</div><h3>They like your content</h3><p>A post or a comment puts you in front of your potential client, and they click your name to view your profile.</p></div>
-      <div class="step"><div class="n">02</div><h3>They read the top</h3><p>Your banner, headline, the first lines of your About. They decide within 3 to 7 seconds whether you're worth it.</p></div>
+      <div class="step"><div class="n">02</div><h3>They view your profile</h3><p>Your banner, headline, the first lines of your About. They decide within 3 to 7 seconds whether you're worth it.</p></div>
       <div class="step bad"><div class="n">03</div><h3>They leave</h3><p>Nothing convinces them to stay and book a call. So they leave, and you lose a client.</p></div>
     </div>
+    <div style="text-align:center;margin-top:44px"><a href="#price" class="btn btn-gold">See how Profile 2.0 fixes this</a></div>
   </div>
 </section>
 
@@ -457,9 +472,10 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
     <p class="sec-sub nowrap">Most profiles get half a job done</p>
     <div class="halves">
       <div class="half"><h3>Hire a designer</h3><p>The banner looks stunning, but the words on it are the same generic AI lines 99 other banners use. Writing copy was never their job.</p></div>
-      <div class="half"><h3>Hire a ghostwriter</h3><p>The words are good, but the background behind them is plain and grabs no attention. It leaves your profile looking barren.</p></div>
+      <div class="half"><h3>Hire a copywriter</h3><p>The words are good, but the background behind them is plain and grabs no attention. It leaves your profile looking barren.</p></div>
       <div class="half win"><h3>Profile 2.0</h3><p>Design and copy synced together across the profile, so it catches your buyer and builds trust within 3 to 7 seconds.</p></div>
     </div>
+    <div style="text-align:center;margin-top:44px"><a href="#price" class="btn btn-gold">Get design and copy synced for you</a></div>
   </div>
 </section>
 
@@ -480,6 +496,7 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
       <div class="d-card dark"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Design</h3><p>Fully optimized for desktop and mobile. The sole purpose of design in Profile 2.0 is to carry the copy rather than bury it.</p></div>
       <div class="d-card dark"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12a9 9 0 0115-6.7L21 8M21 3v5h-5"/><path d="M21 12a9 9 0 01-15 6.7L3 16M3 21v-5h5"/></svg></div><h3>Unlimited revisions</h3><p>I'll keep working on it until you're happy to put it live. Your satisfaction is my top priority.</p></div>
     </div>
+    <div style="text-align:center;margin-top:44px"><a href="#price" class="btn btn-gold">See the full price and package</a></div>
   </div>
 </section>
 
@@ -489,45 +506,47 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
     <div style="text-align:center">
       <div class="tag">The process</div>
       <h2 class="sec-h wide" style="margin:0 auto">How it works</h2>
-      <p class="lead" style="margin:18px auto 0">Five steps, start to finish, with no guesswork on your end.</p>
+      <p class="lead" style="margin:18px auto 0">Six steps, start to finish, with no guesswork on your end.</p>
     </div>
     <div class="timeline">
       <div class="tl-item">
         <div class="tl-num">1</div>
         <div class="tl-body">
-          <h3>You check out and fill in a short questionnaire</h3>
-          <p>It covers who you're trying to reach, what you do, and how you talk. Takes about 20 minutes, and the more honest you are, the better your profile comes out.</p>
+          <h3>You <a href="https://syedattaullahshah.gumroad.com/l/profile-20?wanted=true" style="color:var(--gold-deep);text-decoration:underline">checkout</a> and buy Profile 2.0</h3>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-num">2</div>
         <div class="tl-body">
-          <h3>We get on a quick 15-minute call (optional)</h3>
-          <p>When I recieve your questionnaire, I walk you through what's holding your profile back right now and you can ask me anything.</p>
+          <h3>You fill in a short questionnaire</h3>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-num">3</div>
         <div class="tl-body">
-          <h3>I upgrade the whole profile</h3>
-          <p>Design and copy synced together so every section of your profile point at your buyer persona.</p>
+          <h3>We get on a quick 15-minute call</h3>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-num">4</div>
         <div class="tl-body">
-          <h3>You get everything in 5 working days</h3>
-          <p>Banner files for desktop and mobile, the editable file, and copy you can paste straight in.</p>
+          <h3>I work on upgrading your LinkedIn profile</h3>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-num">5</div>
         <div class="tl-body">
-          <h3>I refine until you're happy</h3>
-          <p>Unlimited revisions until you're satisfied and ready to put it live.</p>
+          <h3>You get everything in 3 to 5 working days</h3>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">6</div>
+        <div class="tl-body">
+          <h3>I refine until you're satisfied</h3>
         </div>
       </div>
     </div>
+    <div style="text-align:center;margin-top:44px"><a href="#price" class="btn btn-gold">Start your profile upgrade</a></div>
   </div>
 </section>
 
@@ -560,6 +579,7 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
       </div>
     </div>
     <p class="car-hint">Tap any profile to see it full size</p>
+    <div style="text-align:center;margin-top:44px"><a href="#price" class="btn btn-gold">Get your profile upgraded like this</a></div>
   </div>
 </section>
 
@@ -602,10 +622,9 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
         </div>
       </div>
     </div>
+    <div style="text-align:center;margin-top:44px"><a href="#price" class="btn btn-gold">Get results like these</a></div>
   </div>
 </section>
-
-<!-- ABOUT -->
 <section id="about">
   <div class="wrap">
     <div class="about-row">
@@ -651,10 +670,10 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Research, copy and design synced to target one buyer across your whole profile</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>The editable file, if you need it</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Unlimited revisions until you are happy</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>5 working days delivery</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>3 to 5 working days delivery</li>
           <li class="gold-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12l5 5L20 7"/></svg>Free profile review if you have any doubts</li>
         </ul>
-        <a href="https://syedattaullahshah.gumroad.com/l/profile-20" class="btn btn-gold">Get Profile 2.0 &mdash; $236</a>
+        <a href="https://syedattaullahshah.gumroad.com/l/profile-20?wanted=true" class="btn btn-gold">Get Profile 2.0 &mdash; $236</a>
         <div class="guarantee">Not sure yet? <a href="https://calendly.com/syedattaullahx96/free-discovery-call" style="color:var(--gold-deep);font-weight:600">Book a free 15-min call</a> and ask me anything.</div>
       </div>
     </div>
@@ -685,7 +704,7 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
   <div class="faq-item"><button class="faq-q">Is any of this written by AI?<span class="pl"></span></button><div class="faq-a"><p>No. I have written 1050+ LinkedIn posts and upgraded 25+ profiles myself, and I know how to make people trust you and buy from you through words alone. Your buyer can spot an AI profile within seconds, and that kills trust just as fast.</p></div></div>
   <div class="faq-item"><button class="faq-q">Will it work for my niche?<span class="pl"></span></button><div class="faq-a"><p>Your profile has to speak to one buyer, and that works the same whatever you sell. What changes is the language, which is what the questionnaire is for.</p></div></div>
   <div class="faq-item"><button class="faq-q">I am not posting yet, should I wait?<span class="pl"></span></button><div class="faq-a"><p>No, doing this first is the better order. The people who look you up once you start will see the finished profile rather than the old one. Nothing moves until you start showing up though, so go in knowing that.</p></div></div>
-  <div class="faq-item"><button class="faq-q">How long does it take?<span class="pl"></span></button><div class="faq-a"><p>Five working days from the moment your questionnaire answers reach me. If you need it faster, the 48-hour add-on gets it to you in two days.</p></div></div>
+  <div class="faq-item"><button class="faq-q">How long does it take?<span class="pl"></span></button><div class="faq-a"><p>Three to five working days from the moment your questionnaire answers reach me. If you need it faster, the 48-hour add-on gets it to you in two days.</p></div></div>
   <div class="faq-item"><button class="faq-q">I still have doubts and a few questions before I invest in this<span class="pl"></span></button><div class="faq-a"><p>Book a <a href="https://calendly.com/syedattaullahx96/free-discovery-call" style="color:var(--gold-deep);font-weight:600" target="_blank" rel="noopener">free 15-min call with me here</a> and get answers to every question before you spend a penny.</p></div></div>
   </div>
   </div>
@@ -697,7 +716,7 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
     <h2>Stop sending your best viewers <em>back to the feed</em></h2>
     <p>Your content already did the hard part. Give those viewers a profile worth staying on.</p>
     <div class="actions">
-      <a href="https://syedattaullahshah.gumroad.com/l/profile-20" class="btn btn-gold">Get Profile 2.0 &mdash; $236</a>
+      <a href="https://syedattaullahshah.gumroad.com/l/profile-20?wanted=true" class="btn btn-gold">Get Profile 2.0 &mdash; $236</a>
       <a href="https://calendly.com/syedattaullahx96/free-discovery-call" class="btn btn-ghost">Book a 15-min call first</a>
     </div>
     <div class="contact-row">
@@ -864,5 +883,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "69932c74a01d4de2836da3067e4d46fe"}'></script><!-- End Cloudflare Web Analytics -->
+<a href="#price" class="discount-badge"><span class="pct">20% OFF</span><span class="lbl">Ends Aug 20</span></a>
+
 </body>
 </html>
