@@ -98,8 +98,10 @@ body.menu-open nav{background:transparent;border-bottom:none;backdrop-filter:non
 .hero h1 em{font-style:normal;color:var(--gold)}
 .hero .sub{font-size:clamp(1.05rem,2vw,1.28rem);color:#C9C2B8;max-width:52ch;margin:28px 0 40px;line-height:1.55}
 .hero .actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.hero .note{font-size:.9rem;color:#8A8378;margin-top:22px;display:flex;align-items:center;gap:8px}
+.hero .note{font-size:.9rem;color:#8A8378;margin-top:22px;line-height:1.6}
 .hero .note b{color:var(--gold);font-weight:600}
+.mobile-break{display:none}
+@media(max-width:600px){.mobile-break{display:inline}}
 
 /* marquee stats */
 .stripe{background:var(--gold);color:#0A0A0A;padding:20px 0;overflow:hidden}
@@ -446,7 +448,7 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
       <a href="https://whop.com/checkout/plan_rYqZUSVOAX572" target="_blank" rel="noopener" class="btn btn-gold">Convert my viewers into clients</a>
       <a href="https://calendly.com/syedattaullahx96/free-discovery-call" class="btn btn-ghost">Book a 15-min call</a>
     </div>
-    <div class="note"><b>20% off</b> the launch price till 20 August. Use code <b>LAUNCH20</b> at checkout</div>
+    <div class="note"><b>20% off</b> the launch price till 20 August.<br class="mobile-break"> Use code <b>LAUNCH20</b> at checkout.</div>
   </div>
 </header>
 
