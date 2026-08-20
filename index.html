@@ -103,6 +103,19 @@ body.menu-open nav{background:transparent;border-bottom:none;backdrop-filter:non
 .mobile-break{display:none}
 @media(max-width:600px){.mobile-break{display:inline}}
 
+/* hero layout with vertical scroller */
+.hero-inner{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+@media(min-width:901px){.hero-inner{grid-template-columns:1.15fr .85fr}}
+.hero-visual{display:none}
+@media(min-width:901px){.hero-visual{display:block}}
+.vscroll{position:relative;height:560px;border-radius:22px;overflow:hidden;
+  mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent);
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent)}
+.vscroll-track{display:flex;flex-direction:column;gap:18px;width:100%;animation:vscroll 34s linear infinite}
+.vscroll-track img{width:100%;display:block;border-radius:14px;border:1px solid rgba(221,153,51,.25)}
+.vscroll:hover .vscroll-track{animation-play-state:paused}
+@keyframes vscroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+
 /* marquee stats */
 .stripe{background:var(--gold);color:#0A0A0A;padding:20px 0;overflow:hidden}
 .stripe .track{display:flex;width:max-content;animation:scroll 30s linear infinite;font-family:'Bricolage Grotesque';font-weight:600;font-size:1.05rem}
@@ -445,12 +458,41 @@ footer .fsocial a{color:var(--gold);text-decoration:none}
 <!-- HERO -->
 <header class="hero" id="home">
   <div class="wrap">
-    <div class="eyebrow"><span></span>Profile 2.0</div>
-    <h1>Convert your LinkedIn profile views into <em>paying clients</em></h1>
-    <p class="sub">Your content brings people to your profile. They see the banner, headline and About, find no reason to stay and leave. Profile 2.0 fixes that.</p>
-    <div class="actions">
-      <a href="https://whop.com/checkout/plan_rYqZUSVOAX572" target="_blank" rel="noopener" class="btn btn-gold">Convert my viewers into clients</a>
-      <a href="https://calendly.com/syedattaullahx96/free-discovery-call" class="btn btn-ghost">Book a 15-min call</a>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span>Profile 2.0</div>
+        <h1>Convert your LinkedIn profile views into <em>paying clients</em></h1>
+        <p class="sub">Your content brings people to your profile. They see the banner, headline and About, find no reason to stay and leave. Profile 2.0 fixes that.</p>
+        <div class="actions">
+          <a href="https://whop.com/checkout/plan_rYqZUSVOAX572" target="_blank" rel="noopener" class="btn btn-gold">Convert my viewers into clients</a>
+          <a href="https://calendly.com/syedattaullahx96/free-discovery-call" class="btn btn-ghost">Book a 15-min call</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="vscroll">
+          <div class="vscroll-track">
+            <img src="images/rebuild-1.jpg" alt="LinkedIn profile rebuild 1">
+            <img src="images/rebuild-2.jpg" alt="LinkedIn profile rebuild 2">
+            <img src="images/rebuild-3.jpg" alt="LinkedIn profile rebuild 3">
+            <img src="images/rebuild-4.jpg" alt="LinkedIn profile rebuild 4">
+            <img src="images/rebuild-5.jpg" alt="LinkedIn profile rebuild 5">
+            <img src="images/rebuild-6.jpg" alt="LinkedIn profile rebuild 6">
+            <img src="images/rebuild-7.jpg" alt="LinkedIn profile rebuild 7">
+            <img src="images/rebuild-8.jpg" alt="LinkedIn profile rebuild 8">
+            <img src="images/rebuild-9.jpg" alt="LinkedIn profile rebuild 9">
+            <!-- duplicate set for seamless loop -->
+            <img src="images/rebuild-1.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-2.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-3.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-4.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-5.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-6.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-7.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-8.jpg" alt="" aria-hidden="true">
+            <img src="images/rebuild-9.jpg" alt="" aria-hidden="true">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </header>
